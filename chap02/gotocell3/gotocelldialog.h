@@ -2,7 +2,7 @@
 #define GOTOCELLDIALOG_H
 
 #include <QDialog>
-
+#include <QRegularExpression>
 #include "ui_gotocelldialog.h"
 
 class GoToCellDialog : public QDialog, public Ui::GoToCellDialog

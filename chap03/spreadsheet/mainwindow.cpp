@@ -1,4 +1,4 @@
-#include <QtGui>
+#include <QtWidgets>
 
 #include "finddialog.h"
 #include "gotocelldialog.h"
@@ -107,8 +107,8 @@ void MainWindow::sort()
 {
     SortDialog dialog(this);
     QTableWidgetSelectionRange range = spreadsheet->selectedRange();
-    dialog.setColumnRange('A' + range.leftColumn(),
-                          'A' + range.rightColumn());
+    dialog.setColumnRange(QChar('A' + range.leftColumn()),
+                          QChar('A' + range.rightColumn()));
 
     if (dialog.exec()) {
         SpreadsheetCompare compare;

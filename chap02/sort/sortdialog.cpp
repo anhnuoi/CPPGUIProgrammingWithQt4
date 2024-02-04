@@ -20,8 +20,8 @@ void SortDialog::setColumnRange(QChar first, QChar last)
     secondaryColumnCombo->clear();
     tertiaryColumnCombo->clear();
 
-    secondaryColumnCombo->addItem(tr("None"));
-    tertiaryColumnCombo->addItem(tr("None"));
+    //secondaryColumnCombo->addItem(tr("None"));
+   // tertiaryColumnCombo->addItem(tr("None"));
 
     primaryColumnCombo->setMinimumSize(
             secondaryColumnCombo->sizeHint());
@@ -31,6 +31,6 @@ void SortDialog::setColumnRange(QChar first, QChar last)
         primaryColumnCombo->addItem(QString(ch));
         secondaryColumnCombo->addItem(QString(ch));
         tertiaryColumnCombo->addItem(QString(ch));
-        ch = ch.unicode() + 1;
+        ch = QChar(ch.unicode() + 1);
     }
 }

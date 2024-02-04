@@ -1,4 +1,4 @@
-#include <QtGui>
+#include <QtWidgets>
 
 #include "cell.h"
 #include "spreadsheet.h"
@@ -131,7 +131,7 @@ void Spreadsheet::sort(const SpreadsheetCompare &compare)
         rows.append(row);
     }
 
-    qStableSort(rows.begin(), rows.end(), compare);
+    std::stable_sort(rows.begin(), rows.end(), compare);
 
     for (i = 0; i < range.rowCount(); ++i) {
         for (int j = 0; j < range.columnCount(); ++j)

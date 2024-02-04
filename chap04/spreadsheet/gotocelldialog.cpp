@@ -1,5 +1,5 @@
-#include <QtGui>
-
+#include <QtWidgets>
+#include <QRegularExpression>
 #include "gotocelldialog.h"
 
 GoToCellDialog::GoToCellDialog(QWidget *parent)
@@ -8,8 +8,8 @@ GoToCellDialog::GoToCellDialog(QWidget *parent)
     setupUi(this);
     buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 
-    QRegExp regExp("[A-Za-z][1-9][0-9]{0,2}");
-    lineEdit->setValidator(new QRegExpValidator(regExp, this));
+    QRegularExpression regExp("[A-Za-z][1-9][0-9]{0,2}");
+    lineEdit->setValidator(new QRegularExpressionValidator(regExp, this));
 
     connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
     connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));

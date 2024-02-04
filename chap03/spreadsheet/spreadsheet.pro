@@ -14,4 +14,7 @@ SOURCES       = cell.cpp \
                 spreadsheet.cpp
 FORMS         = gotocelldialog.ui \
                 sortdialog.ui
-RESOURCES     = spreadsheet.qrc
+RESOURCES     = spreadsheet.qrc \
+    videos.qrc
+QT           += widgets core
+QT           += core5compat

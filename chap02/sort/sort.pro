@@ -1,5 +1,9 @@
 TEMPLATE      = app
-HEADERS       = sortdialog.h
+HEADERS       = sortdialog.h \
+    testdialog.h
 SOURCES       = main.cpp \
-                sortdialog.cpp
-FORMS         = sortdialog.ui
+                sortdialog.cpp \
+                testdialog.cpp
+FORMS         = sortdialog.ui \
+    testdialog.ui
+QT           += widgets core

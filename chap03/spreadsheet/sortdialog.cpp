@@ -1,4 +1,4 @@
-#include <QtGui>
+#include <QtWidgets>
 
 #include "sortdialog.h"
 
@@ -31,6 +31,6 @@ void SortDialog::setColumnRange(QChar first, QChar last)
         primaryColumnCombo->addItem(QString(ch));
         secondaryColumnCombo->addItem(QString(ch));
         tertiaryColumnCombo->addItem(QString(ch));
-        ch = ch.unicode() + 1;
+        ch = QChar(ch.unicode() + 1);;
     }
 }

@@ -18,7 +18,7 @@ protected:
     QString textFromValue(int value) const;
 
 private:
-    QRegExpValidator *validator;
+    QRegularExpressionValidator *validator;
 };
 
 #endif

@@ -1,5 +1,5 @@
-#include <QtGui>
-
+#include <QtWidgets>
+#include <QRegExp>
 #include "cell.h"
 
 Cell::Cell()
